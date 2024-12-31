@@ -29,6 +29,7 @@ finance_agent=Agent(name='Financial Agent',
                     markdown=True)
 
 multi_ai_agent=Agent(
+    model=Groq(id='llama3-groq-70b-8192-tool-use-preview'),
     team=[web_search_agent,finance_agent],
     instructions=["Always include the source of the information in your response.","Use tables to display the data."],
     show_tool_calls=True,
